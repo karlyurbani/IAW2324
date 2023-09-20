@@ -15,4 +15,6 @@ Tambien podemos tener listas numeradas
 \ Con la barra invertida no tendran efecto los elementos *`
 ___________________________________________________________
 
-Pueden acceder a mi perfil a través del enlace (https://github.com/karlyurbani/IAW2324)
+Pueden acceder a mi perfil a través del enlace [Karly Urbani](https://github.com/karlyurbani/IAW2324)
+
+modificamos el README, ya había creado el index
