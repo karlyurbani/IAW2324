@@ -10,4 +10,7 @@ En este te,a vamos a instalar las principales aplicaciones con las que vamos a t
 Tambien podemos tener listas numeradas
 1. Primero 
 2. Segundo
-3. Tercero
+3. Tercero ***podemos dar estilo de cursiva y negrita***
+
+\ Con la barra invertida no tendran efecto los elementos *`
+___________________________________________________________
