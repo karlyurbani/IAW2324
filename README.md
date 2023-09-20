@@ -5,3 +5,9 @@ En este te,a vamos a instalar las principales aplicaciones con las que vamos a t
 -Visual Studio Code
 -Git
 -Docker
+**Con el doble asterisco podemos dar aspecto de negrita**
+*En cambio con uno, el aspecto sera de cursaiva*
+Tambien podemos tener listas numeradas
+1. Primero 
+2. Segundo
+3. Tercero
