@@ -17,4 +17,5 @@ ___________________________________________________________
 
 Pueden acceder a mi perfil a través del enlace [Karly Urbani](https://github.com/karlyurbani/IAW2324)
 
-modificamos el README, ya había creado el index
+Modificamos el README, ya había creado el inde
+Y dejo constancia de ello
