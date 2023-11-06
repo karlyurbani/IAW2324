@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+  }
+.contenedor{
+display: flex;
+}
+button{
+    position: absolute;   
+}
+
+#rojo{
+background: red;
+border-radius: 50%;
+width: 100px;
+height: 100px;
+}
+
+#azul{
+    background: blue;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+    
+#verde{
+    background: green;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}

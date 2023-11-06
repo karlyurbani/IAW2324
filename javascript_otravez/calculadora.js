@@ -24,5 +24,5 @@ function dividir(){
 function potencia(){
     let x = parseFloat(document.getElementById("numero1").value);
     let y = parseFloat(document.getElementById("numero2").value);
-    return x(Math.pow());
+    return (Math.pow(x,y));
 }
