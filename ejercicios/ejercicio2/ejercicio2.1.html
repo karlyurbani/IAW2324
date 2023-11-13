@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masa corporal</title>
+</head>
+<body>
+    <h1>Introduce tu peso y estatura para calcular tu masa corporal</h1>
+
+        
+    <label for="">Introduce tu altura en cm<input type="text" id="altura"></label> <br>
+    <label for="peso">Introduce tu peso</label><input type="text" id="peso"> <br>
+        <button onclick="calcularMasa();">Calcular</button>
+            <p id="resultado"></p>  
+            <script>
+function calcularMasa(){
+    var altura = parseFloat(document.getElementById("altura").value);
+    var peso = parseFloat(document.getElementById("peso").value);
+    var  indice = (peso / Math.pow(altura, 2));
+
+if (indice<18.5){
+    document.getElementById('resultado').innerHTML = "Su IMC es bajo";
+}
+
+else if (indice>=18.5 && indice<=24.9){
+    document.getElementById('resultado').innerHTML = "Su IMC es normal";
+}
+
+else if (indice>=25.0 && indice<=29.9){
+    document.getElementById('resultado').innerHTML = "Su indice es superior al normal";
+}
+
+else if  (indice>=30.00){
+    document.getElementById('resultado').innerHTML = "Usted esta obeso";
+}
+}
+            
+    </script>
+      
+</body>
+</html>

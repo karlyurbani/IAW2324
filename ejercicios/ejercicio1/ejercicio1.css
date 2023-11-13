@@ -3,9 +3,7 @@
   }
 .contenedor{
 display: flex;
-}
-button{
-    position: absolute;   
+flex-direction: row;
 }
 
 #rojo{
