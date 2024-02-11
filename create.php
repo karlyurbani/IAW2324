@@ -24,6 +24,7 @@
     }
 
 ?>
+
 <h1 class="text-center">Añadir incidencia</h1>
   <div class="container">
     <form action="" method="post">
@@ -31,8 +32,25 @@
 <label for="selecciona">Selecciona el aula según la planta a la que corresponda:</label>
 <select name="selecciona" id="selecciona" class="form-control">
 <option value="select">Selecciona</option>    
-<optgroup label="Planta 0" name='planta'>
-      <option value="aula10">Aula 10</option>
+<!-- <optgroup label="Planta 0" name='planta'> -->
+          <?php 
+          $sql_planta="SELECT id_plantas, nombre_plantas from plantas order by 1";
+          $sql_aula="SELECT id_aulas, nombre_aula, id_plantas from aulas";
+          $result_plantas=$conn->query($sql_planta);
+          while ($row_planta = $result_plantas->fetch_assoc()) {
+            echo "<optgroup label=" . $row_planta['nombre_plantas'] . " name=" . $row_planta['nombre_plantas'] . ">";  
+            $result_aulas=$conn->query($sql_aula);
+            while ($row_aulas = $result_aulas->fetch_assoc()) {
+                 if ($row_aulas["id_plantas"] == $row_planta["id_plantas"]){
+                  echo "<option value=" . $row_aulas["id_aulas"] . ">" . $row_aulas["nombre_aula"] . "</option>"; 
+                }
+              }  
+            echo "</optgroup>";
+            }
+            
+            
+          ?>
+      <!-- <option value="aula10">Aula 10</option>
       <option value="aula11">Aula 11</option>
       <option value="aula12">Aula 12</option>
       <option value="aula13">Aula 13</option>
@@ -48,7 +66,7 @@
       <option value="aula301">Aula 301</option>
       <option value="aula302">Aula 302</option>
       <option value="aula303">Aula 303</option>
-    </optgroup>
+    </optgroup> -->
   </select>
 </div>
       <div class="form-group">
