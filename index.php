@@ -27,25 +27,19 @@
   </div>
 </div>
 <?php
-echo "<p>Algo 1</p>";
 if ($_POST){
-    echo "<p>Algo 2</p>";
         $usuario = htmlspecialchars($_POST["usuario"]);
         $contrasena = htmlspecialchars(base64_encode($_POST['contrasena']));
-        echo "Entro aqui";
         include_once 'db.php';
         // Intentamos la conexión con MySQL
         $enlace = mysqli_connect("sql307.thsite.top","thsi_35748554","mB?aD8Xy","thsi_35748554_proyecto");
             
         if ($enlace)
-            //$query = "SELECT * FROM usuarios WHERE username='".$_POST['usuario']."' AND password='".$_POST['contrasena']."'";
             $query = "SELECT * FROM usuarios WHERE username='".mysqli_real_escape_string($enlace,$usuario)."' AND password='".mysqli_real_escape_string($enlace,base64_encode($_POST['contrasena']))."'";
             $result = mysqli_query($enlace,$query);
             if (mysqli_num_rows($result)==1)
             {
-
                 header("location: includes/home.php");
-                //echo "<p>Bienvenido " . $usuario . "</p>";
                 session_start();
                 $_SESSION['user'] = $usuario;
             }
