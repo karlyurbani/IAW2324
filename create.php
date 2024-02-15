@@ -1,4 +1,12 @@
 <?php  include "../header.php"?>
+<?php 
+session_set_cookie_params(0);
+session_start(); 
+  if ($_SESSION['user']) {                 
+  }
+  else{
+    header ("location: ../index.php");
+  }?>
 <?php     
                 //  inc totales
                 $inc_totales ="SELECT COUNT(*) as totales FROM incidencias";
@@ -45,8 +53,6 @@
   </div>
 </nav>  
 
-<?php session_set_cookie_params();?>
-<?php session_start();?>
 <?php 
   if(isset($_POST['crear'])) 
     {
